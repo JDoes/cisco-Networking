@@ -1,0 +1,72 @@
+*******Diagnosing a Router with********
+**Cisco Time-Domain Reflectometer (TDR)**
+=========================================
+
+
+In priv exec mode, look at status of interface with:
+
+Router# show ip interface brief
+
+an interface can be:
+ 	
+
+Indicates the status of interface. Valid values and their meanings are:
+
+    up						Interface is administratively up.
+    down 					Interface is administratively down.
+    administratively down 	Interface is administratively down (put down on purpose with a command)
+
+
+
+==================================================
+
+Cisco Time-Domain Reflectometer (TDR)
+You can test a specific interface.
+
+Further explanation here:
+https://www.cisco.com/c/en/us/td/docs/optical/cpt/r9_3/command/reference/cpt93_cr/cpt93_cr_chapter_01110.html
+
+Official Cisco Documentation:
+https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst9600/software/release/16-11/configuration_guide/int_hw/b_1611_int_and_hw_9600_cg/checking_port_status_and_connectivity.pdf
+
+Run a test on the cables, run the following command, specific to an interface:
+
+
+Router# test cable-diagnostics tdr interface gi1/0/3 
+		wait a few seconds
+Router# show cable-diagnostics tdr interface gi1/0/3
+
+
+Ethernet cable twisted pairs:
+
+=============================================================================
+Pairs 	|	Function
+--------+--------------------------------------------------------------------
+A 	    |	This pair controls whether or not the port should go up or down.
+--------+--------------------------------------------------------------------
+B 		|	Protocol-level and controls FastEthernet.
+--------+--------------------------------------------------------------------
+C 		|	Power over Ethernet (PoE)
+--------+--------------------------------------------------------------------
+D 		|	GigabitEthernet
+=============================================================================
+
+
+Interpretation of results:
+
+=========================================================================================
+Result 		|	Explaination
+------------+----------------------------------------------------------------------------
+Normal 		|	Ideal result you want.
+			|
+    		|	If testing FastEthernet, you want Pair A and B as “Normal”.
+    		|	If testing GigabitEthernet, you want ALL as “Normal”.
+------------+----------------------------------------------------------------------------
+Open 		|	Open circuit. This means that one (or more) pair has “no pin contact”.
+------------+----------------------------------------------------------------------------
+Short 		|	Short circuit.
+------------+----------------------------------------------------------------------------
+Impedance 	|
+Mismatched 	|	Bad cable. For more explanation, go here.
+=========================================================================================
+
