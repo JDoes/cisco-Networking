@@ -55,18 +55,18 @@ D 	|	GigabitEthernet
 Interpretation of results:
 
 =========================================================================================
-Result 		|	Explaination
+Result 	    |	Explaination
 ------------+----------------------------------------------------------------------------
-Normal 		|	Ideal result you want.
-		|
-    		|	If testing FastEthernet, you want Pair A and B as “Normal”.
-    		|	If testing GigabitEthernet, you want ALL as “Normal”.
+Normal 	    |	Ideal result you want.
+	    |
+    	    |	If testing FastEthernet, you want Pair A and B as “Normal”.
+    	    |	If testing GigabitEthernet, you want ALL as “Normal”.
 ------------+----------------------------------------------------------------------------
-Open 		|	Open circuit. This means that one (or more) pair has “no pin contact”.
+Open 	    |	Open circuit. This means that one (or more) pair has “no pin contact”.
 ------------+----------------------------------------------------------------------------
-Short 		|	Short circuit.
+Short 	    |	Short circuit.
 ------------+----------------------------------------------------------------------------
-Impedance 	|
-Mismatched 	|	Bad cable. For more explanation, go here.
+Impedance   |
+Mismatched  |	Bad cable. For more explanation, go here.
 =========================================================================================
 
