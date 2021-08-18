@@ -1,0 +1,15 @@
+Cisco Firepower 9300
+
+Rack mount firewall appliance
+
+https://www.cisco.com/c/en/us/products/collateral/security/firepower-9000-series/datasheet-c78-742471.html
+
+https://www.cisco.com/c/en/us/td/docs/security/firepower/fxos/CLI_Reference_Guide/b_FXOS_CLI_reference/b_CLI_reference_chapter_0100.html#wp1910151097
+
+Check fan and hardware status as follows:
+
+# scope chassis
+
+/chassis # show environment summary
+
+
