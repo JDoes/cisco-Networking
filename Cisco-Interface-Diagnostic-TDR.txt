@@ -67,6 +67,6 @@ Open 	    |	Open circuit. This means that one (or more) pair has “no pin conta
 Short 	    |	Short circuit.
 ------------+----------------------------------------------------------------------------
 Impedance   |
-Mismatched  |	Bad cable. For more explanation, go here.
+Mismatched  |	Bad cable, or unplugged.
 =========================================================================================
 
