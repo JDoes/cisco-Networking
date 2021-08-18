@@ -14,7 +14,7 @@ Indicates the status of interface. Valid values and their meanings are:
 
     up						Interface is administratively up.
     down 					Interface is administratively down.
-    administratively down 	Interface is administratively down (put down on purpose with a command)
+    administratively down 			Interface is administratively down (put down on purpose with a command)
 
 
 
@@ -42,13 +42,13 @@ Ethernet cable twisted pairs:
 =============================================================================
 Pairs 	|	Function
 --------+--------------------------------------------------------------------
-A 	    |	This pair controls whether or not the port should go up or down.
+A 	|	This pair controls whether or not the port should go up or down.
 --------+--------------------------------------------------------------------
-B 		|	Protocol-level and controls FastEthernet.
+B 	|	Protocol-level and controls FastEthernet.
 --------+--------------------------------------------------------------------
-C 		|	Power over Ethernet (PoE)
+C 	|	Power over Ethernet (PoE)
 --------+--------------------------------------------------------------------
-D 		|	GigabitEthernet
+D 	|	GigabitEthernet
 =============================================================================
 
 
@@ -58,7 +58,7 @@ Interpretation of results:
 Result 		|	Explaination
 ------------+----------------------------------------------------------------------------
 Normal 		|	Ideal result you want.
-			|
+		|
     		|	If testing FastEthernet, you want Pair A and B as “Normal”.
     		|	If testing GigabitEthernet, you want ALL as “Normal”.
 ------------+----------------------------------------------------------------------------
